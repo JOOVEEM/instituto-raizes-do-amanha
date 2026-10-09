@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro – Instituto Raízes do Amanhã</title>
+<meta name="description" content="Cadastre-se como voluntário ou apoiador do Instituto Raízes do Amanhã.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<picture>
+<source type="image/webp" srcset="img/logo.webp">
+<img src="img/logo.png" alt="Logotipo do Instituto Raízes do Amanhã" width="64" height="64">
+</picture>
+<p><strong>Instituto Raízes do Amanhã</strong></p>
+<nav aria-label="Menu principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Projetos, voluntariado e doações</a></li>
+<li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+</ul>
+</nav>
+</header>
+<main>
+
+<h1>Cadastro</h1>
+<p id="aviso" role="status" hidden></p>
+<p>Campos com * são obrigatórios.</p>
+
+<form action="#" method="post" id="form-cadastro">
+<fieldset>
+<legend>Dados pessoais</legend>
+<p><label for="nome">Nome completo *</label><br>
+<input type="text" id="nome" name="nome" placeholder="Maria da Silva" required minlength="5"></p>
+<p><label for="email">E-mail *</label><br>
+<input type="email" id="email" name="email" placeholder="maria@exemplo.com" required></p>
+<p><label for="cpf">CPF *</label><br>
+<input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Use o formato 000.000.000-00" required></p>
+<p><label for="telefone">Telefone *</label><br>
+<input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Use o formato (11) 91234-5678" required></p>
+<p><label for="nascimento">Data de nascimento *</label><br>
+<input type="date" id="nascimento" name="nascimento" max="2008-10-08" required></p>
+</fieldset>
+
+<fieldset>
+<legend>Endereço</legend>
+<p><label for="cep">CEP *</label><br>
+<input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" pattern="\d{5}-\d{3}" title="Use o formato 00000-000" required></p>
+<p><label for="endereco">Endereço *</label><br>
+<input type="text" id="endereco" name="endereco" placeholder="Rua das Flores, 45" required></p>
+<p><label for="cidade">Cidade *</label><br>
+<input type="text" id="cidade" name="cidade" required></p>
+<p><label for="estado">Estado *</label><br>
+<select id="estado" name="estado" required>
+<option value="">Selecione</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AP">AP</option>
+<option value="AM">AM</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MT">MT</option>
+<option value="MS">MS</option>
+<option value="MG">MG</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PR">PR</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RS">RS</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="SC">SC</option>
+<option value="SP">SP</option>
+<option value="SE">SE</option>
+<option value="TO">TO</option>
+</select></p>
+</fieldset>
+
+<fieldset>
+<legend>Como quer participar?</legend>
+<p><input type="radio" id="vol" name="perfil" value="voluntario" required><label for="vol">Voluntário</label></p>
+<p><input type="radio" id="doa" name="perfil" value="doador"><label for="doa">Doador / apoiador</label></p>
+<p><input type="radio" id="ambos" name="perfil" value="ambos"><label for="ambos">Os dois</label></p>
+</fieldset>
+
+<p><input type="checkbox" id="aceite" name="aceite" required><label for="aceite">Concordo com o uso dos meus dados para contato. *</label></p>
+
+<p><button type="submit">Enviar cadastro</button> <button type="reset">Limpar</button></p>
+</form>
+
+</main>
+<footer>
+<hr>
+<address>
+Rua das Acácias, 120 – Centro, São Paulo – SP, 01000-000<br>
+Telefone: <a href="tel:+551140001234">(11) 4000-1234</a><br>
+E-mail: <a href="mailto:contato@raizesdoamanha.org.br">contato@raizesdoamanha.org.br</a>
+</address>
+<p><small>© 2026 Instituto Raízes do Amanhã – ONG fictícia criada para fins acadêmicos.</small></p>
+</footer>
+<script src="js/script.js" defer></script>
+</body>
+</html>

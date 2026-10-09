@@ -1,0 +1,70 @@
+/* Instituto Raízes do Amanhã – estilos mobile-first aplicados direto nas tags semânticas */
+:root{
+  --verde:#1F4D3A; --verde-escuro:#14352a; --claro:#EAF3EE; --ocre:#F2B544;
+  --texto:#1c2420; --borda:#c5d3ca; --foco:#0b57d0;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;color:var(--texto);background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--verde)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--foco);outline-offset:2px}
+
+/* Cabeçalho e menu */
+header{background:var(--verde);color:#fff;padding:.75rem 1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
+header img{width:48px;height:48px}
+header p{margin:0;font-size:1.15rem}
+header nav{width:100%}
+header ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+header a{color:#fff;display:inline-block;padding:.4rem .2rem;text-decoration:none}
+header a:hover{text-decoration:underline}
+header a[aria-current="page"]{border-bottom:3px solid var(--ocre);font-weight:700}
+
+/* Conteúdo */
+main{width:min(100% - 2rem,1000px);margin:0 auto;padding:1.5rem 0}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:.5rem 0 1rem;color:var(--verde)}
+h2{font-size:clamp(1.4rem,3.5vw,1.8rem);margin:0 0 .75rem;color:var(--verde)}
+h3{font-size:1.15rem;margin:.75rem 0 .25rem}
+main>section{padding:1.5rem 0;border-top:1px solid var(--borda)}
+main>section:first-child{border-top:0}
+figure{margin:0 0 1rem}
+figure img{border-radius:8px;width:100%}
+figcaption{font-size:.9rem;color:#445;margin-top:.4rem}
+ol li,ul li{margin-bottom:.25rem}
+
+/* Cartões de projetos */
+article{border:1px solid var(--borda);border-radius:8px;padding:1rem;margin-bottom:1rem;background:#fff}
+article img{border-radius:6px;margin-bottom:.75rem}
+article h3{margin-top:0;color:var(--verde)}
+
+progress{width:100%;max-width:420px;height:1.1rem}
+
+/* Formulário */
+form{max-width:640px}
+fieldset{border:1px solid var(--borda);border-radius:8px;margin:0 0 1.25rem;padding:1rem}
+legend{font-weight:700;padding:0 .4rem;color:var(--verde)}
+label{font-weight:600}
+input[type="radio"]+label,input[type="checkbox"]+label{font-weight:400;margin-left:.4rem}
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],select{width:100%;padding:.6rem;margin-top:.2rem;border:2px solid #6c7d73;border-radius:6px;font:inherit}
+input:user-invalid,select:user-invalid{border-color:#a02b20}
+button{background:var(--verde);color:#fff;border:2px solid var(--verde);padding:.65rem 1.2rem;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+button:hover{background:var(--verde-escuro)}
+button[type="reset"]{background:#fff;color:var(--verde)}
+button[type="reset"]:hover{background:var(--claro)}
+
+/* Rodapé */
+footer{background:var(--verde-escuro);color:#fff;padding:1.5rem 1rem;text-align:center}
+footer hr{display:none}
+footer a{color:#ffd88a}
+address{font-style:normal}
+
+/* Tablet e desktop */
+@media (min-width:700px){
+  header{padding:.75rem 2rem}
+  header nav{width:auto;margin-left:auto}
+  article{display:grid;grid-template-columns:260px 1fr;column-gap:1.25rem}
+  article h3{grid-column:1/-1}
+  article picture{grid-column:1;grid-row:2/5}
+  article p{grid-column:2;margin:0 0 .5rem}
+}
+@media (min-width:1100px){main{padding:2.5rem 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
